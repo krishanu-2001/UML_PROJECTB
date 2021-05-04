@@ -1,6 +1,6 @@
 format 224
 "Assignment"
-  revision 1
+  revision 2
   modified_by 2 "krishanu"
 
 
@@ -103,6 +103,185 @@ format 224
       
       activitydiagramsettings
        end
+    end
+  end
+
+  classview 128002 "Sequence"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    sequencediagram 134530 "Sequence"
+      sequencediagramsettings end
+      overlapping_bars size A4
+    end
+
+    class 134530 "user"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+    end
+
+    classinstance 128002 "Faculty"
+      type class_ref 134530 // user
+      attributes
+        end
+      relations
+        end
+    end
+
+    class 134658 "Auth"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+    end
+
+    classinstance 128130 "Login"
+      type class_ref 134658 // Auth
+      attributes
+        end
+      relations
+        end
+    end
+
+    class 134786 "UI"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+    end
+
+    classinstance 128258 "Dashboard"
+      type class_ref 134786 // UI
+      attributes
+        end
+      relations
+        end
+    end
+
+    class 134914 "INFO"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+    end
+
+    classinstance 128386 "Assignment"
+      type class_ref 134914 // INFO
+      attributes
+        end
+      relations
+        end
+    end
+
+    classinstance 128514 "Grade"
+      type class_ref 134914 // INFO
+      attributes
+        end
+      relations
+        end
+    end
+
+    classinstance 128642 "Student"
+      type class_ref 134530 // user
+      attributes
+        end
+      relations
+        end
+    end
+
+    sequencediagram 134658 "Sequence2"
+      sequencediagramsettings end
+      overlapping_bars size A4
+    end
+
+    class 135042 "Admin"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+    end
+
+    classinstance 128770 "A"
+      type class_ref 135042 // Admin
+      attributes
+        end
+      relations
+        end
+    end
+
+    class 135170 "User"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+    end
+
+    classinstance 128898 "Placement"
+      type class_ref 135298 // DB
+      attributes
+        end
+      relations
+        end
+    end
+
+    class 135298 "DB"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
     end
   end
 end

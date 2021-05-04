@@ -1,0 +1,117 @@
+format 224
+
+classinstancecanvas 128002 classinstance_ref 128770 // A
+  xyz 30 4 2005 life_line_z 2000
+end
+classinstancecanvas 128130 classinstance_ref 128130 // Login
+  xyz 128 4 2005 life_line_z 2000
+end
+classinstancecanvas 128258 classinstance_ref 128258 // Dashboard
+  xyz 236 4 2010 life_line_z 2000
+end
+classinstancecanvas 128386 classinstance_ref 128642 // Student
+  xyz 406 4 2015 life_line_z 2000
+end
+classinstancecanvas 128514 classinstance_ref 128002 // Faculty
+  xyz 525 4 2020 life_line_z 2000
+end
+classinstancecanvas 128770 classinstance_ref 128898 // Placement
+  xyz 655 4 2025 life_line_z 2000
+end
+fragment 132354 "ALT"
+  xyzwh 9 244 2010 794 412
+end
+textcanvas 132482 "[View Student]"
+  xyzwh 19 305 2015 85 16
+textcanvas 132610 "[View Faculty]"
+  xyzwh 19 394 2015 83 16
+textcanvas 132738 "[View Placement]"
+  xyzwh 23 525 2015 102 16
+durationcanvas 128898 classinstance_ref 128002 // A:Admin
+  xyzwh 55 70 2015 11 159
+end
+durationcanvas 129026 classinstance_ref 128130 // Login:Auth
+  xyzwh 159 70 2015 11 161
+end
+durationcanvas 129282 classinstance_ref 128258 // Dashboard:UI
+  xyzwh 275 108 2015 11 387
+end
+durationcanvas 129538 classinstance_ref 128130 // Login:Auth
+  xyzwh 159 95 2015 11 134
+end
+durationcanvas 129794 classinstance_ref 128386 // Student:user
+  xyzwh 443 275 2015 11 32
+end
+durationcanvas 130050 classinstance_ref 128258 // Dashboard:UI
+  xyzwh 275 330 2015 11 162
+end
+durationcanvas 130178 classinstance_ref 128514 // Faculty:user
+  xyzwh 561 387 2015 11 93
+end
+durationcanvas 131074 classinstance_ref 128258 // Dashboard:UI
+  xyzwh 275 109 2015 11 385
+end
+durationcanvas 131202 classinstance_ref 128386 // Student:user
+  xyzwh 443 270 2015 11 77
+end
+durationcanvas 131458 classinstance_ref 128258 // Dashboard:UI
+  xyzwh 275 108 2015 11 447
+end
+durationcanvas 131586 classinstance_ref 128514 // Faculty:user
+  xyzwh 561 386 2015 11 97
+end
+durationcanvas 131842 classinstance_ref 128258 // Dashboard:UI
+  xyzwh 275 104 2015 11 470
+end
+durationcanvas 131970 classinstance_ref 128770 // Placement:DB
+  xyzwh 697 505 2015 11 65
+end
+msg 129154 synchronous
+  from durationcanvas_ref 128898
+  to durationcanvas_ref 129026
+  yz 95 2015 explicitmsg "1. Authenticate"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 68 83
+msg 129410 synchronous
+  from durationcanvas_ref 129026
+  to durationcanvas_ref 129282
+  yz 179 2015 explicitmsg "2. Accepted"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 177 163
+msg 129666 return
+  from durationcanvas_ref 129538
+  to durationcanvas_ref 128898
+  yz 203 2015 explicitmsg "Auth-failed"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 80 187
+msg 129922 synchronous
+  from durationcanvas_ref 129282
+  to durationcanvas_ref 129794
+  yz 296 2015 explicitmsg "3. View Students"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 312 278
+msg 130306 synchronous
+  from durationcanvas_ref 130050
+  to durationcanvas_ref 130178
+  yz 412 2015 explicitmsg "5. View Faculty"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 328 397
+msg 131330 synchronous
+  from durationcanvas_ref 131074
+  to durationcanvas_ref 131202
+  yz 327 2015 explicitmsg "4. Add / Update Student"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 292 311
+msg 131714 synchronous
+  from durationcanvas_ref 131458
+  to durationcanvas_ref 131586
+  yz 444 2015 explicitmsg "6. Add / Update faculty"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 360 428
+msg 132098 synchronous
+  from durationcanvas_ref 131842
+  to durationcanvas_ref 131970
+  yz 538 2015 explicitmsg "7. View Placement Statistics"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 406 522
+end

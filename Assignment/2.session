@@ -1,0 +1,12 @@
+window_sizes 1800 901 243 1551 715 128
+
+diagrams
+  active  usecasediagram_ref 128002 // u1
+    1240 572 100 A4 0 0
+end
+show_stereotypes
+selected usecasediagram_ref 128002 // u1
+open
+  usecaseview_ref 128002 // Admin
+end
+end

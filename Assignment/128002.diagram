@@ -1,0 +1,10 @@
+format 224
+
+classcanvas 128002 class_ref 128002 // Hello
+  simpleclassdiagramsettings end
+  xyz 153 140 2000
+end
+usecasecanvas 128130 usecase_ref 128002 // Please confirm
+  xyzwh 227 145 3005 64 32 label_xy 216 177
+end
+end
